@@ -114,6 +114,8 @@ export default class DrawerView<T: *> extends PureComponent<void, Props, void> {
 
   render() {
     const DrawerScreen = this.props.router.getComponentForRouteName('DrawerClose');
+    const TopBar = this.props.topBar;
+    const BottomBar = this.props.bottomBar;
     return (
       <DrawerLayout
         ref={(c: *) => (this._drawer = c)}
@@ -126,10 +128,14 @@ export default class DrawerView<T: *> extends PureComponent<void, Props, void> {
           DrawerLayout.positions.Right : DrawerLayout.positions.Left
         }
       >
+        <TopBar
+          onDrawerOpen={this._handleDrawerOpen}
+        />
         <DrawerScreen
           screenProps={this.props.screenProps}
           navigation={this._screenNavigationProp}
         />
+        <BottomBar />
       </DrawerLayout>
     );
   }

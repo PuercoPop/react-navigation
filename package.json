@@ -1,6 +1,6 @@
 {
   "name": "react-navigation",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.8",
   "description": "React Navigation",
   "main": "src/react-navigation.js",
   "sources": {
@@ -69,6 +69,8 @@
     "hoist-non-react-statics": "^1.2.0",
     "path-to-regexp": "^1.7.0",
     "react-native-drawer-layout": "^1.1.0",
+    "react-native-navbar": "^1.6.2",
+    "react-native-tab-navigator": "^0.3.3",
     "react-native-tab-view": "^0.0.56"
   },
   "jest": {

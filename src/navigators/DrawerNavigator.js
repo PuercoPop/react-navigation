@@ -45,8 +45,11 @@ const DrawerNavigator = (
     contentComponent,
     contentOptions,
     drawerPosition,
+    topBar,
+    bottomBar,
     ...tabsConfig
   } = mergedConfig;
+
   const contentRouter = TabRouter(routeConfigs, tabsConfig);
   const drawerRouter = TabRouter({
     DrawerClose: {
@@ -63,6 +66,8 @@ const DrawerNavigator = (
   return createNavigationContainer(createNavigator(drawerRouter)((props: *) =>
     <DrawerView
       {...props}
+      topBar={topBar}
+      bottomBar={bottomBar}
       drawerWidth={drawerWidth}
       contentComponent={contentComponent}
       contentOptions={contentOptions}
